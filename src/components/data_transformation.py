@@ -19,7 +19,7 @@ from src.utils import save_object
 ## Data Transformation config
 
 @dataclass
-class DataTransformationconfig:
+class DataTransformationconfig:# the path of pkl where it needs to be saved that's why we have created this
     preprocessor_obj_file_path=os.path.join('artifacts','preprocessor.pkl')
 
 
@@ -99,11 +99,11 @@ class DataTransformation:
             drop_columns = [target_column_name,'id']
 
             ## features into independent and dependent features
-
+            ### this is for train data
             input_feature_train_df = train_df.drop(columns=drop_columns,axis=1)
             target_feature_train_df=train_df[target_column_name]
 
-
+            ### this is for test data
             input_feature_test_df=test_df.drop(columns=drop_columns,axis=1)
             target_feature_test_df=test_df[target_column_name]
 
