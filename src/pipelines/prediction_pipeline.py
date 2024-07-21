@@ -2,7 +2,7 @@ import sys
 import os
 from src.exception import CustomException
 from src.logger import logging
-from src.utils import load_object
+from src.utils import load_object ### the files which we have created in artifacts folder we need to load this that's why we have import load_object
 import pandas as pd
 
 class PredictPipeline:
